@@ -8,7 +8,6 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 export const metadata: Metadata = {
   title: "Dazora Tech | Software Development Company",
   description: "Dazora Tech builds websites, mobile applications and custom software for businesses in Pakistan and worldwide. Founded in 2022 and based in Islamabad.",
-  metadataBase: new URL("https://dazoratech.com"),
   openGraph: {
     title: "Dazora Tech | Ideas into digital impact",
     description: "Software, design and digital growth for ambitious businesses.",

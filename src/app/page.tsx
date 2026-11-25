@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import {
   ArrowDown, ArrowRight, ArrowUpRight, Menu, X, Code2, Smartphone,
   Search, Boxes, HeartPulse, Truck, ShoppingBag, Palette, Video,
   Globe2, GraduationCap, Factory, Sprout, Landmark, Rocket, Workflow,
-  Mail, MapPin, Phone, Check, Sparkles, Layers3, MonitorSmartphone
+  Mail, MapPin, Phone, Check, Sparkles, Layers3
 } from "lucide-react";
 
 const services = [
@@ -94,7 +94,7 @@ function SectionIntro({ eyebrow, title, copy, center = false }: { eyebrow: strin
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const reduceMotion = useReducedMotion();
-  const reveal = reduceMotion ? {} : { initial: { opacity: 0, y: 24 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.12 }, transition: { duration: 0.65, ease: "easeOut" as const } };
+  const reveal = { initial: reduceMotion ? false : { opacity: 0, y: 24 }, whileInView: reduceMotion ? undefined : { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.12 }, transition: { duration: 0.65, ease: "easeOut" as const } };
   const closeMenu = () => setMenuOpen(false);
 
   return (
